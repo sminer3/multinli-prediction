@@ -1,3 +1,5 @@
 *.csv
 *.jsonl
 *.json
+*.pyc
+*.pyo
