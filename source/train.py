@@ -1,7 +1,7 @@
 print("Loading libraries")
 import os
 import sys
-os.chdir(os.getcwd() + '/source')
+#os.chdir(os.getcwd() + '/source')
 sys.path.insert(0, '../scripts/')
 import functions as fn
 import nn_functions as nn
