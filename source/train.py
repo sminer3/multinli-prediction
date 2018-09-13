@@ -88,7 +88,7 @@ early_stopping = EarlyStopping(monitor="val_loss", patience=5)
 model_checkpoint = ModelCheckpoint('NN_test_model.h5',save_best_only=True,save_weights_only=True) #, questions_train, f_train , questions_val, f_val
 hist = model.fit(training, label_train, validation_data=(dev, label_dev), 
                         epochs=18, batch_size=BATCH_SIZE, shuffle=True,
-                        callbacks=[early_stopping, model_checkpoint], verbose=2)
+                        callbacks=[early_stopping, model_checkpoint], verbose=1)
 print("validation loss:", min(hist.history["val_loss"]))\
 
 model.load_weights('NN_test_model.h5')
