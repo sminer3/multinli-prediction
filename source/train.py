@@ -79,9 +79,9 @@ dev = [s1_dev, s2_dev]
 testing = [s1_test, s2_test]
 
 model = nn.decomposable_attention(embedding_matrix, projection_dim, projection_hidden, projection_dropout,compare_dim, compare_dropout,dense_dim, dense_dropout, lr, activation, MAX_SEQUENCE_LENGTH)
-model.load_weights('NN_test_model.h5')
-model.predict([s1[1:10],s2[1:10]])
-model.evaluate(x=testing, y=label_test)
+#model.load_weights('NN_test_model.h5')
+#model.predict([s1[1:10],s2[1:10]])
+#model.evaluate(x=testing, y=label_test)
 
 
 early_stopping = EarlyStopping(monitor="val_loss", patience=5)
